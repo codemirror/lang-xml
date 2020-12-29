@@ -1,6 +1,6 @@
 import {parser} from "lezer-xml"
-import {indentNodeProp, foldNodeProp, LezerLanguage, LanguageSupport} from "@codemirror/next/language"
-import {styleTags, tags as t} from "@codemirror/next/highlight"
+import {indentNodeProp, foldNodeProp, LezerLanguage, LanguageSupport} from "@codemirror/language"
+import {styleTags, tags as t} from "@codemirror/highlight"
 import {ElementSpec, AttrSpec, completeFromSchema} from "./complete"
 
 /// A language provider based on the [Lezer XML
