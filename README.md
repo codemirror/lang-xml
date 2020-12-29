@@ -1,6 +1,6 @@
-# @codemirror/lang-xml
+# @codemirror/lang-xml [![NPM version](https://img.shields.io/npm/v/@codemirror/lang-xml.svg)](https://www.npmjs.org/package/@codemirror/lang-xml)
 
-[ [![NPM version](https://img.shields.io/npm/v/@codemirror/next.svg)](https://www.npmjs.org/package/@codemirror/lang-xml) | [**WEBSITE**](https://codemirror.net/6/) | [**ISSUES**](https://github.com/codemirror/codemirror.next/issues) | [**FORUM**](https://discuss.codemirror.net/c/next/) | [**CHANGELOG**](https://github.com/codemirror/lang-xml/blob/main/CHANGELOG.md) ]
+[ [**WEBSITE**](https://codemirror.net/6/) | [**ISSUES**](https://github.com/codemirror/codemirror.next/issues) | [**FORUM**](https://discuss.codemirror.net/c/next/) | [**CHANGELOG**](https://github.com/codemirror/lang-xml/blob/main/CHANGELOG.md) ]
 
 This package implements XML language support for the
 [CodeMirror](https://codemirror.net/6/) code editor.
