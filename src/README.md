@@ -24,3 +24,9 @@ to communication around the project.
 @xml
 
 @xmlLanguage
+
+@ElementSpec
+
+@AttrSpec
+
+@completeFromSchema

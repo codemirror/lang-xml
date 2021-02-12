@@ -2,6 +2,7 @@ import {parser} from "lezer-xml"
 import {indentNodeProp, foldNodeProp, LezerLanguage, LanguageSupport} from "@codemirror/language"
 import {styleTags, tags as t} from "@codemirror/highlight"
 import {ElementSpec, AttrSpec, completeFromSchema} from "./complete"
+export {ElementSpec, AttrSpec, completeFromSchema}
 
 /// A language provider based on the [Lezer XML
 /// parser](https://github.com/lezer-parser/xml), extended with
