@@ -1,3 +1,9 @@
+## 0.17.2 (2021-02-12)
+
+### Bug fixes
+
+Export configuration types and `completeFromSchema` function (which were previously accidentally unexported).
+
 ## 0.17.1 (2021-01-06)
 
 ### New features
