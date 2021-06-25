@@ -1,7 +1,7 @@
 import {Completion, CompletionSource} from "@codemirror/autocomplete"
 import {EditorState, Text} from "@codemirror/state"
 import {syntaxTree} from "@codemirror/language"
-import {SyntaxNode} from "lezer-tree"
+import {SyntaxNode} from "@lezer/common"
 
 /// Describes an element in your XML document schema.
 export interface ElementSpec {
