@@ -13,7 +13,7 @@ export const xmlLanguage = LezerLanguage.define({
       indentNodeProp.add({
         Element(context) {
           let closed = /^\s*<\//.test(context.textAfter)
-          return context.lineIndent(context.state.doc.lineAt(context.node.from)) + (closed ? 0 : context.unit)
+          return context.lineIndent(context.node.from) + (closed ? 0 : context.unit)
         },
         "OpenTag CloseTag SelfClosingTag"(context) {
           return context.column(context.node.from) + context.unit
