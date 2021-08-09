@@ -71,7 +71,7 @@ type Location = {
 } | null
 
 function findLocation(state: EditorState, pos: number): Location {
-  let at = syntaxTree(state).resolve(pos, -1), inTag = null
+  let at = syntaxTree(state).resolveInner(pos, -1), inTag = null
   for (let cur = at; !inTag && cur.parent; cur = cur.parent)
     if (cur.name == "OpenTag" || cur.name == "CloseTag" || cur.name == "SelfClosingTag" || cur.name == "MismatchedCloseTag")
       inTag = cur
