@@ -27,13 +27,12 @@ export const xmlLanguage = LRLanguage.define({
         }
       }),
       styleTags({
-        AttributeValue: t.string,
         Text: t.content,
         "StartTag StartCloseTag EndTag SelfCloseEndTag": t.angleBracket,
         TagName: t.tagName,
         "MismatchedCloseTag/Tagname": [t.tagName, t.invalid],
-        AttributeName: t.propertyName,
-        UnquotedAttributeValue: t.string,
+        AttributeName: t.attributeName,
+        AttributeValue: t.attributeValue,
         Is: t.definitionOperator,
         "EntityReference CharacterReference": t.character,
         Comment: t.blockComment,
