@@ -1,6 +1,5 @@
 import {parser} from "@lezer/xml"
 import {indentNodeProp, foldNodeProp, LRLanguage, LanguageSupport} from "@codemirror/language"
-import {styleTags, tags as t} from "@codemirror/highlight"
 import {ElementSpec, AttrSpec, completeFromSchema} from "./complete"
 export {ElementSpec, AttrSpec, completeFromSchema}
 
@@ -25,20 +24,6 @@ export const xmlLanguage = LRLanguage.define({
           if (!first || first.name != "OpenTag") return null
           return {from: first.to, to: last.name == "CloseTag" ? last.from : subtree.to}
         }
-      }),
-      styleTags({
-        Text: t.content,
-        "StartTag StartCloseTag EndTag SelfCloseEndTag": t.angleBracket,
-        TagName: t.tagName,
-        "MismatchedCloseTag/Tagname": [t.tagName, t.invalid],
-        AttributeName: t.attributeName,
-        AttributeValue: t.attributeValue,
-        Is: t.definitionOperator,
-        "EntityReference CharacterReference": t.character,
-        Comment: t.blockComment,
-        ProcessingInst: t.processingInstruction,
-        DoctypeDecl: t.documentMeta,
-        Cdata: t.special(t.string)
       })
     ]
   }),
