@@ -188,7 +188,7 @@ export function completeFromSchema(eltSpecs: readonly ElementSpec[], attrSpecs: 
       return {
         from,
         options: children.map(ch => ch.completion),
-        span: Identifier
+        validFor: Identifier
       }
     } else if (type == "closeTag") {
       let parentName = elementName(doc, context)
@@ -196,14 +196,14 @@ export function completeFromSchema(eltSpecs: readonly ElementSpec[], attrSpecs: 
         from,
         to: cx.pos + (doc.sliceString(cx.pos, cx.pos + 1) == ">" ? 1 : 0),
         options: [byName[parentName]?.closeNameCompletion || {label: parentName + ">", type: "type"}],
-        span: Identifier
+        validFor: Identifier
       } : null
     } else if (type == "attrName") {
       let parent = byName[tagName(doc, context)]
       return {
         from,
         options: parent?.attrs || globalAttrs,
-        span: Identifier
+        validFor: Identifier
       }
     } else if (type == "attrValue") {
       let attr = attrName(doc, context, from)
@@ -215,7 +215,7 @@ export function completeFromSchema(eltSpecs: readonly ElementSpec[], attrSpecs: 
         from,
         to: cx.pos + (doc.sliceString(cx.pos, cx.pos + 1) == '"' ? 1 : 0),
         options: values,
-        span: /^"[^"]*"?$/
+        validFor: /^"[^"]*"?$/
       }
     } else if (type == "tag") {
       let parentName = elementName(doc, context), parent = byName[parentName]
@@ -231,7 +231,7 @@ export function completeFromSchema(eltSpecs: readonly ElementSpec[], attrSpecs: 
       return {
         from,
         options,
-        span: /^<\/?[:\-\.\w\u00b7-\uffff]*$/
+        validFor: /^<\/?[:\-\.\w\u00b7-\uffff]*$/
       }
     } else {
       return null
