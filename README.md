@@ -41,7 +41,7 @@ configured.</p>
 <a href="#user-content-xml%5econf.elements"><code>elements</code></a>.</p>
 </dd></dl></dd></dl></dd>
 <dt id="user-content-xmllanguage">
-  <code><strong><a href="#user-content-xmllanguage">xmlLanguage</a></strong>: <a href="https://codemirror.net/6/docs/ref#language.LezerLanguage">LezerLanguage</a></code></dt>
+  <code><strong><a href="#user-content-xmllanguage">xmlLanguage</a></strong>: <a href="https://codemirror.net/6/docs/ref#language.LRLanguage">LRLanguage</a></code></dt>
 
 <dd><p>A language provider based on the <a href="https://github.com/lezer-parser/xml">Lezer XML
 parser</a>, extended with
@@ -121,5 +121,6 @@ element</p>
 <dt id="user-content-completefromschema">
   <code><strong><a href="#user-content-completefromschema">completeFromSchema</a></strong>(<a id="user-content-completefromschema^eltspecs" href="#user-content-completefromschema^eltspecs">eltSpecs</a>: readonly <a href="#user-content-elementspec">ElementSpec</a>[], <a id="user-content-completefromschema^attrspecs" href="#user-content-completefromschema^attrspecs">attrSpecs</a>: readonly <a href="#user-content-attrspec">AttrSpec</a>[]) → <a href="https://codemirror.net/6/docs/ref#autocomplete.CompletionSource">CompletionSource</a></code></dt>
 
-<dd></dd>
+<dd><p>Create a completion source for the given schema.</p>
+</dd>
 </dl>

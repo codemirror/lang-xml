@@ -137,6 +137,7 @@ function valueCompletion(spec: string | Completion): Completion {
     : {...spec, label: `"${spec.label}"`}
 }
 
+/// Create a completion source for the given schema.
 export function completeFromSchema(eltSpecs: readonly ElementSpec[], attrSpecs: readonly AttrSpec[]): CompletionSource {
   let allAttrs: Completion[] = [], globalAttrs: Completion[] = []
   let attrValues: {[name: string]: readonly Completion[]} = Object.create(null)
