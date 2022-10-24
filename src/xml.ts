@@ -7,6 +7,7 @@ export {ElementSpec, AttrSpec, completeFromSchema}
 /// parser](https://github.com/lezer-parser/xml), extended with
 /// highlighting and indentation information.
 export const xmlLanguage = LRLanguage.define({
+  name: "xml",
   parser: parser.configure({
     props: [
       indentNodeProp.add({
