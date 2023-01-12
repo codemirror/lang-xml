@@ -1,5 +1,5 @@
 import {parser} from "@lezer/xml"
-import {indentNodeProp, foldNodeProp, LRLanguage, LanguageSupport} from "@codemirror/language"
+import {indentNodeProp, foldNodeProp, LRLanguage, LanguageSupport, bracketMatchingHandle} from "@codemirror/language"
 import {ElementSpec, AttrSpec, completeFromSchema} from "./complete"
 export {ElementSpec, AttrSpec, completeFromSchema}
 
@@ -25,6 +25,9 @@ export const xmlLanguage = LRLanguage.define({
           if (!first || first.name != "OpenTag") return null
           return {from: first.to, to: last.name == "CloseTag" ? last.from : subtree.to}
         }
+      }),
+      bracketMatchingHandle.add({
+        "OpenTag CloseTag": node => node.getChild("TagName")
       })
     ]
   }),
