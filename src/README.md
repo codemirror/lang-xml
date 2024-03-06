@@ -30,3 +30,5 @@ to communication around the project.
 @AttrSpec
 
 @completeFromSchema
+
+@autoCloseTags

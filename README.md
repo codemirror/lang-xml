@@ -39,6 +39,11 @@ configured.</p>
 
 <dd><p>Supporting attribute descriptions for the schema specified in
 <a href="#user-content-xml%5econf.elements"><code>elements</code></a>.</p>
+</dd><dt id="user-content-xml^conf.autoclosetags">
+  <code><strong><a href="#user-content-xml^conf.autoclosetags">autoCloseTags</a></strong>&#8288;?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code></dt>
+
+<dd><p>Determines whether <a href="#user-content-autoclosetags"><code>autoCloseTags</code></a>
+is included in the support extensions. Defaults to true.</p>
 </dd></dl></dd></dl></dd>
 <dt id="user-content-xmllanguage">
   <code><strong><a href="#user-content-xmllanguage">xmlLanguage</a></strong>: <a href="https://codemirror.net/docs/ref#language.LRLanguage">LRLanguage</a></code></dt>
@@ -122,5 +127,11 @@ element</p>
   <code><strong><a href="#user-content-completefromschema">completeFromSchema</a></strong>(<a id="user-content-completefromschema^eltspecs" href="#user-content-completefromschema^eltspecs">eltSpecs</a>: readonly <a href="#user-content-elementspec">ElementSpec</a>[], <a id="user-content-completefromschema^attrspecs" href="#user-content-completefromschema^attrspecs">attrSpecs</a>: readonly <a href="#user-content-attrspec">AttrSpec</a>[]) → <a href="https://codemirror.net/docs/ref#autocomplete.CompletionSource">CompletionSource</a></code></dt>
 
 <dd><p>Create a completion source for the given schema.</p>
+</dd>
+<dt id="user-content-autoclosetags">
+  <code><strong><a href="#user-content-autoclosetags">autoCloseTags</a></strong>: <a href="https://codemirror.net/docs/ref#state.Extension">Extension</a></code></dt>
+
+<dd><p>Extension that will automatically insert close tags when a <code>&gt;</code> or
+<code>/</code> is typed.</p>
 </dd>
 </dl>
