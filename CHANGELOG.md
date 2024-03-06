@@ -1,3 +1,9 @@
+## 6.1.0 (2024-03-06)
+
+### New features
+
+Add an `autoCloseTags` extension that closes tags on typing > or /. Enable it by default in the `xml()` language support.
+
 ## 6.0.2 (2023-01-12)
 
 ### Bug fixes
