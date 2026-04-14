@@ -8,7 +8,7 @@ import {ElementSpec, AttrSpec, completeFromSchema} from "./complete"
 export {ElementSpec, AttrSpec, completeFromSchema}
 
 /// A language provider based on the [Lezer XML
-/// parser](https://github.com/lezer-parser/xml), extended with
+/// parser](https://code.haverbeke.berlin/lezer/xml), extended with
 /// highlighting and indentation information.
 export const xmlLanguage = LRLanguage.define({
   name: "xml",
